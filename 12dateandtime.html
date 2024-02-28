@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Document</title>
+    <script type="text/javascript"
+src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js">
+</script>
+<script>
+    var app = angular.module("myapp",[]);
+    app.controller("cntrl",function($scope){
+        $scope.currentDate=new Date();
+        });
+</script>
+</head>
+<body ng-app="myapp">
+    <div ng-controller ="cntrl">
+    Current date and time: {{currentDate}}<br/>
+    short Date : {{currentDate|date: 'short'}}<br>
+    Long Date : {{currentDate|date: 'fullDate'}}
+    Medium Date : {{currentDate|date: 'medium'}}
+    
+    </div>
+</body>
+</html>
